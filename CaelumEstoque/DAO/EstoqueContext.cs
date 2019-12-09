@@ -12,9 +12,18 @@ namespace CaelumEstoque.DAO
 
         public DbSet<Usuario> Usuarios { get; set; }
 
+        public EstoqueContext() : base("EstoqueContext")
+        {
+            bool criou = Database.CreateIfNotExists();
+
+      
+        }
+
         protected override void OnModelCreating(DbModelBuilder dbModelBuilder)
         {
             dbModelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
 }
+
+
