@@ -15,5 +15,16 @@ namespace CaelumEstoque.Controllers
             ViewBag.Categorias = categorias;
             return View();
         }
+
+        public ActionResult Adiciona()
+        {
+            return View();
+        }
+
+        public ActionResult Adiciona(CategoriaDoProduto categoria)
+        {
+
+            return View(); 
+        }
     }
 }
